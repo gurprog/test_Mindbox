@@ -20,7 +20,7 @@ namespace ShapesTests
         }
 
         [Fact]
-        public void IsRightSquare_TypeOfTrisngle_True()
+        public void IsRightSquare_TypeOfTriangle_True()
         {
             // Arrange
             var triangle = new Triangle(3, 4, 5);
@@ -33,7 +33,7 @@ namespace ShapesTests
         }
 
         [Fact]
-        public void IsRightSquare_TypeOfTrisngle_False()
+        public void IsRightSquare_TypeOfTriangle_False()
         {
             // Arrange
             var triangle = new Triangle(3, 4, 4);
