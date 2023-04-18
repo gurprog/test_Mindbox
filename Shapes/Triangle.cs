@@ -1,12 +1,12 @@
 ﻿namespace Shapes
 {
-    public class Triangle:IShape
+    public class Triangle : IShapeSquareCalculator
     {
         public double FirstSide { get; }
-        private double SecondSide { get; }
-        private double ThirdSide { get; }
+        public double SecondSide { get; }
+        public double ThirdSide { get; }
 
-        public bool IsRightTriangle { get; }
+        public bool IsRightTriangle => CheckRightTriangleByPifagor();
 
         public Triangle(double firstSide, double secondSide, double thirdSide)
         {
@@ -18,15 +18,6 @@
             FirstSide = firstSide;
             SecondSide = secondSide;
             ThirdSide = thirdSide;
-
-            if (CheckRightTriangle(firstSide, secondSide, thirdSide) && CheckRightTriangle(secondSide, firstSide, thirdSide) && CheckRightTriangle(thirdSide, secondSide, firstSide))
-            {
-                IsRightTriangle = true;
-            }
-            else
-            {
-                IsRightTriangle = false;
-            }
         }
 
         public double CalcSquare()
@@ -36,9 +27,12 @@
             return Math.Sqrt(parameter * (parameter - FirstSide) * (parameter - SecondSide) * (parameter - ThirdSide));
         }
 
-        private bool CheckRightTriangle(double a, double b, double c)
+
+        private bool CheckRightTriangleByPifagor()
         {
-            return Math.Pow(a, 2) == Math.Pow(b, 2) + Math.Pow(c, 2);
+            double[] sides = {FirstSide, SecondSide, ThirdSide};
+            var orderedSides = sides.Order().ToArray();
+            return Math.Pow(orderedSides[2], 2) == Math.Pow(orderedSides[1], 2) + Math.Pow(orderedSides[0], 2);
         }
     }
 }

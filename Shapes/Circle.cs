@@ -1,6 +1,6 @@
 ﻿namespace Shapes
 {
-    public class Circle : IShape
+    public class Circle : IShapeSquareCalculator
     {
         public double Radius { get; }
         public Circle(double radius)

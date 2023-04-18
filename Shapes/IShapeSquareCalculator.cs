@@ -1,6 +1,6 @@
 ﻿namespace Shapes
 {
-    public interface IShape
+    public interface IShapeSquareCalculator
     {
         public double CalcSquare();
     }
