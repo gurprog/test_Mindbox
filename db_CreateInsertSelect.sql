@@ -11,10 +11,12 @@ GO
 
 INSERT ProductsAndCategories VALUES (1,'Mouse', 'Toy')
 INSERT ProductsAndCategories VALUES (2,'Elephant', 'Toy')
-INSERT ProductsAndCategories VALUES (3,'Earphone', '')
-INSERT ProductsAndCategories VALUES (4,'1984', 'Book')
-INSERT ProductsAndCategories VALUES (5,'Pen', '')
-INSERT ProductsAndCategories VALUES (6,'Guitar', 'Musical Instrument')
+INSERT ProductsAndCategories VALUES (3,'Mouse', 'Animal')
+INSERT ProductsAndCategories VALUES (4,'Elephant', 'Car')
+INSERT ProductsAndCategories VALUES (5,'Earphone', '')
+INSERT ProductsAndCategories VALUES (6,'1984', 'Book')
+INSERT ProductsAndCategories VALUES (7,'Pen', '')
+INSERT ProductsAndCategories VALUES (8,'Guitar', 'Musical Instrument')
 GO
 
 Select Product, Category from ProductsAndCategories
